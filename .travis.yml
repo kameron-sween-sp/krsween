@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - "6"
+  - "7"
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - node_modules
+
+before_script:
+  - npm i
+
+script:
+  - ng test
+  - ng e2e
+  - ng build --aot -prod
