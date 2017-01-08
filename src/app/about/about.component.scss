@@ -1,0 +1,28 @@
+@import "../../variables";
+
+p {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline-block;
+        a {
+            display: block;
+            padding: 1.5em;
+            font-size: 1.5em;
+            color: rgba($white, .5);
+            text-decoration: none;
+
+            transition: color 250ms;
+
+            &:hover {
+                color: rgba($white, .75);
+            }
+        }
+    }
+}

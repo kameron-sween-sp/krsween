@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import "variables";
+
+// Grid
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    color: rgba($white, .25);
+    background-color: $primary;
+    font-size: 14px;
+    font-weight: 100;
+}

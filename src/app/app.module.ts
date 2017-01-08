@@ -6,22 +6,33 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 // App
 import { AppComponent } from './app.component';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
-    { path: '**', component: AppComponent }
+    {
+        path: 'about',
+        component: AboutComponent
+    },
+    {
+        path: '**',
+        component: AboutComponent
+    }
 ];
+
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        AboutComponent
     ],
     imports: [
-        RouterModule.forRoot(appRoutes),
         BrowserModule,
         FormsModule,
-        HttpModule
+        HttpModule,
+        RouterModule.forRoot(appRoutes)
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    schemas: [],
 })
 export class AppModule { }
