@@ -1,6 +1,6 @@
 // NG2
 import { TestBed, async } from '@angular/core/testing';
-import { RouterLinkStubDirective, RouterOutletStubComponent } from '../testing/router-stubs';
+import { RouterLinkStubDirective, RouterOutletStubComponent } from '../../testing/router-stubs';
 // APP
 import { AppComponent } from './app.component';
 
