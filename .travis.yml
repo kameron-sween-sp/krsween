@@ -17,4 +17,5 @@ before_script:
   - npm i # also runs build
 
 script:
+  - npm run lint
   - ng test --watch false
