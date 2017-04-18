@@ -1,9 +1,86 @@
+@import 'colors.scss';
+
+:host {
+    display: block;
+    border-top: solid 100px $dark-blue;
+    width: 100%;
+}
+
 section {
-    padding-top: 4em;
-    h1 {
-        font-size: 2em;
-        text-align: center;
-        font-weight: 100;
-        margin: 0;
+    width: calc(100% - 2em);
+    padding: 1em;
+}
+
+@media all and (min-width: 1000px) {
+    section {
+        max-width: 1000px;
+        margin-left: calc(50% - 500px);
     }
 }
+
+footer {
+    background-color: $dark-blue;
+    color: rgba(white, .50);
+    font-size: .75em;
+    padding: 2em;
+    text-align: center;
+    font-weight: 100;
+
+}
+
+.profile-img {
+    border-radius: 20em;
+    max-width: 125px;
+    max-height: 125px;
+    filter: grayscale(70%);
+    transition: 1s filter;
+
+    &:hover {
+        filter: grayscale(0%);
+    }
+}
+
+section {
+    article {
+        padding: 0 10% 3em;
+        > h3 {
+            width: 100%;
+            display: block;
+        }
+        &.links {
+            > div {
+                overflow: hidden;
+                display: flex;
+                > div,
+                > img {
+
+                    flex: 1;
+                }
+                > div {
+                    columns: 200px 3;
+                    padding-left: 2em;
+                }
+            }
+        }
+
+        &.bio {
+            > div > p {
+                columns: 200px 2;
+            }
+        }
+
+        &.brands {
+            > div {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: baseline;
+                > svg {
+                    min-width: 120px;
+                    padding: 2em 1em;
+                    flex: auto;
+                }
+            }
+        }
+    }
+}
+

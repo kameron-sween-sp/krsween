@@ -1,13 +1,37 @@
-@import "variables";
-
-// Grid
-body, html {
-    padding: 0;
-    margin: 0;
-    height: 100vh;
+@import './app/colors.scss';
+* {
     font-family: 'Open Sans', sans-serif;
-    color: rgba($white, .25);
-    background-color: $primary;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#pre-load-text {
+    display: block;
+    width: 100%;
+    padding-top: 2em;
+    text-align: center;
+}
+
+// Typography
+
+h2 {
+    font-size: 24px;
+    color: $dark-blue;
+    font-weight: normal;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 16px;
+    color: $light-blue;
+}
+
+p {
+    opacity: 0.7;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    font-weight: 100;
+    color: $dark-blue;
+    line-height: 21px;
 }

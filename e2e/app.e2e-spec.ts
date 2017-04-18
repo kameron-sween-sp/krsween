@@ -1,15 +1,14 @@
-// Page Object
 import { KrsweenPage } from './app.po';
 
-describe('krsween App', function() {
-    let page: KrsweenPage;
+describe('krsween App', () => {
+  let page: KrsweenPage;
 
-    beforeEach(() => {
-        page = new KrsweenPage();
-    });
+  beforeEach(() => {
+    page = new KrsweenPage();
+  });
 
-    it('should display message saying app works', () => {
-        page.navigateTo();
-        expect(page.getHeadingText()).toEqual('@krsween');
-    });
+  it('should display message saying app works', () => {
+    page.navigateTo();
+    expect(page.getParagraphText()).toEqual('app works!');
+  });
 });

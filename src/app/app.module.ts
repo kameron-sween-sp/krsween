@@ -3,36 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule, Routes } from '@angular/router';
 // App
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
-
-const appRoutes: Routes = [
-    {
-        path: 'about',
-        component: AboutComponent
-    },
-    {
-        path: '**',
-        component: AboutComponent
-    }
-];
-
+import { HeaderComponent } from './header/header.component';
+import { BioLinkComponent } from './bio-link/bio-link.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        AboutComponent
+        HeaderComponent,
+        BioLinkComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
-        HttpModule,
-        RouterModule.forRoot(appRoutes)
+        HttpModule
     ],
     providers: [],
-    bootstrap: [AppComponent],
-    schemas: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

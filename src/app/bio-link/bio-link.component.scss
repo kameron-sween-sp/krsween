@@ -1,0 +1,22 @@
+@import '../colors.scss';
+
+:host {
+    display: inline-block;
+    width: 250px;
+}
+
+a {
+    text-decoration: none;
+    padding: .25em .50em;
+    color: lighten($pink, 20%);
+    transition: 250ms color ease-in;
+
+    > i {
+        width: 25px;
+        padding: 1em;
+    }
+
+    &:hover {
+        color: $pink;
+    }
+}
